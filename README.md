@@ -1,5 +1,7 @@
 # &lt;github-fork/&gt;#
 
+![github-fork](http://cdn.caferati.me/images/github-fork.png)
+
 The github-fork is a cool option to quickly add the "Fork me on github" ribbon to your projects.
 =======================================================================================
 
