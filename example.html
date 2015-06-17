@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>The Awesome Button</title>
+	<!-- Page style -->
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="example.css">
+	<!-- Webcomponents (cross-browser polyfill) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.6.0/webcomponents.min.js"></script>
+	<!-- Awesome Button -->
+	<link async rel="import" href="awesome-button.html" />
+	<link async rel="import" href="github-fork.html" />
+</head>
+
+<body>
+	<main>
+		<div>
+			<section>
+				<h1>Web components are awesome</h1>
+				<p>The github-fork is a cool option to quickly add the "Fork it on github" ribbon to your projects.</p>
+				<h2>&lt;github-fork/&gt;</h2>
+				<ul class="examples">
+					<!-- Awesome Button tags -->
+					<li>
+						<div class="code">
+							<span>&lt;github-fork</span> <em>href</em>=<b>"http://github.com/rcaferati/github-fork"</b><span>&gt;</span><span>&lt;/github-fork&gt;</span>
+						</div>
+					</li>
+					<li>
+						<div class="code">
+							document.<i>querySelector</i>(<b>"github-fork"</b>).<i>exit</i>();
+						</div>
+						<awesome-button color="teal" type="source" id="run-exit">Run this code</awesome-button>
+					</li>
+					<li>
+						<div class="code">
+							document.<i>querySelector</i>(<b>"github-fork"</b>).<i>enter</i>();
+						</div>
+						<awesome-button color="teal" type="source" id="run-enter" disabled>Run <b>this</b> code</awesome-button>
+					</li>
+					<li>
+						<div class="code">
+							document.<i>querySelector</i>(<b>"github-fork"</b>).<i>background</i>(<b id="color">"#2196F3"</b>);
+						</div>
+						<awesome-button color="teal" type="source" id="run-color">Run this code</awesome-button>
+					</li>
+
+				</ul>
+				<footer>
+					<small>Check this and more projects at my <a href="http://caferati.me/labs">labs page</a>.</small>
+				</footer>
+			</section>
+		</div>
+	</main>
+	<github-fork href="http://github.com/rcaferati" hidden></github-fork>
+	<script>
+		(function () {
+			var github = document.querySelector("github-fork");
+			var enter = document.getElementById("run-enter");
+			var exit = document.getElementById("run-exit");
+			setTimeout(function () {
+				github.enter();
+			}, 900);
+			enter.addEventListener("action", function () {
+				exit.disabled(false);
+				enter.disabled(true);
+				color.disabled(false);
+				github.enter();
+			});
+			exit.addEventListener("action", function () {
+				exit.disabled(true);
+				enter.disabled(false);
+				color.disabled(true);
+				github.exit();
+			});
+			var colors = {
+					index: 0,
+					options: ["#5c5c5c", "#2196F3", "#9C27B0", "#607D8B", "#009688", "#F44336"],
+				},
+				color = document.getElementById("run-color"),
+				text = document.getElementById("color");
+			color.addEventListener("action", function () {
+				var current = (colors.index + 1) >= colors.options.length ? 0 : (colors.index + 1),
+					next = (current + 1) >= colors.options.length ? 0 : (current + 1);
+				console.log(current);
+				console.log(next);
+				github.background(colors.options[current]);
+				colors.index = current;
+				text.innerHTML = "\"" + colors.options[next] + "\"";
+			});
+		})();
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+* {
+	margin: 0;
+	padding: 0
+}
+
+body,
+html {
+	background-color: #2f2f2f;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	font-family: Montserrat;
+	overflow: hidden;
+}
+
+h1 {
+	letter-spacing: -1px;
+	margin: 0 0 12px;
+	color: #cfcfcf;
+	line-height: 32px;
+	font-size: 32px;
+	text-shadow: 2px 2px 0 rgba(100, 100, 100, .15)
+}
+
+h2{
+	color: #6a6a6a;
+	margin-bottom: 24px;
+}
+
+p {
+	margin: 0 0 24px;
+	color: #6a6a6a;
+}
+
+ul{
+	list-style: none;
+}
+
+main {
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: auto;
+	position: fixed;
+}
+
+main::-webkit-scrollbar {
+	width: 5px;
+}
+main::-webkit-scrollbar-track-piece {
+	background-color: rgba(0,0,0,0);
+}
+main::-webkit-scrollbar-thumb {
+	background-color: rgba(0,0,0,0.05);
+}
+
+main > div{
+	display: table;
+	width: 100%;
+	min-height: 100%;
+}
+
+section {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 60px 0;
+}
+
+awesome-button {
+	display: block;
+	min-height: 38px;
+	margin: 0;
+	color: rgba(0,0,0,0);
+}
+
+github-fork{
+	display: block;
+	position: fixed;
+	right: 0;
+	top: 0;
+	color: rgba(0,0,0,0);
+}
+
+.examples{
+	display: block;
+	text-align: center;
+}
+
+.use {
+	display: inline-block;
+	margin-top: 55px;
+}
+
+.code{
+	display: block;
+	color: #FFFFFF;
+	font-size: 13px;
+	margin-bottom: 10px;
+	line-height: 20px;
+}
+
+.code span{
+	color: #f92672;
+	font-style: normal;
+}
+
+.code em{
+	color: #a6e22e;
+	font-style: normal;
+}
+
+.code b{
+	color: #e6db74;
+	font-weight: normal;
+}
+
+.code i{
+	color: #66d9ef;
+	font-weight: normal;
+	font-style: normal;
+}
+
+li{
+	margin-bottom: 40px;
+	position: relative;
+}
+
+li:after{
+	content: " ";
+	position: absolute;
+	bottom: -20px;
+	left: 35%;
+	width: 30%;
+	height: 1px;
+	background-color: rgba(255,255,255,0.1);
+}
+
+footer{
+	margin-top:50px;
+	color: #6a6a6a;
+}
+
+footer a{
+	color: #cfcfcf;
+	text-decoration: none;
+}
