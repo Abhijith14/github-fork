@@ -1,6 +1,6 @@
 # &lt;github-fork/&gt;#
 
-The github-fork is a cool option to quickly add the "Fork it on github" ribbon to your projects.
+The github-fork is a cool option to quickly add the "Fork me on github" ribbon to your projects.
 =======================================================================================
 
 ## Live demo
