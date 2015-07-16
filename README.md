@@ -1,33 +1,33 @@
-# &lt;github-fork/&gt;#
+&lt;github-fork/&gt;
+=================
 
-![github-fork](http://cdn.caferati.me/images/github-fork.gif)
-
-The github-fork is a cool option to quickly add the "Fork me on github" ribbon to your projects.
-=======================================================================================
+The github-fork Vanilla JS custom element web component is a cool option to quickly add the 'Fork me on github' ribbon/button to your web projects.
 
 ## Live demo
 
 [Access the live demo here.](http://caferati.me/demo/github-fork)
 
+![github-fork](http://i.imgur.com/FYV6IJ6.gif)
+
 ### Quick usage
 
 1. Load the WebComponents polyfill:
 
-```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.3/webcomponents.min.js"></script>
-```
+  ```html
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.3/webcomponents.min.js"></script>
+  ```
 
 2. Import the Awesome-Button:
 
-```html
-<link rel="import" href="/github-fork.html">
-```
+  ```html
+  <link rel="import" href="/github-fork.html">
+  ```
 
 3. Use it:
 
-```html
-<github-fork href="http://github.com/rcaferati/github-fork"></github-fork>
-```
+  ```html
+  <github-fork href="http://github.com/rcaferati/github-fork"></github-fork>
+  ```
 
 ## Install
 
