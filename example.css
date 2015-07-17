@@ -10,7 +10,24 @@ html {
 	width: 100%;
 	text-align: center;
 	font-family: Montserrat;
-	overflow: hidden;
+	font-size: 14px;
+}
+
+html{
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+html::-webkit-scrollbar {
+	width: 5px;
+}
+
+html::-webkit-scrollbar-track-piece {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+html::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.05);
 }
 
 h1 {
@@ -22,41 +39,35 @@ h1 {
 	text-shadow: 2px 2px 0 rgba(100, 100, 100, .15)
 }
 
-h2{
+h2 {
 	color: #6a6a6a;
 	margin-bottom: 24px;
+	font-size: 24px;
+}
+
+h2 strong{
+	display: block;
+}
+
+h2 span{
+	display: block;
+	font-weight: normal;
+	font-size: 12px;
+	margin-top: 4px;
 }
 
 p {
 	margin: 0 0 24px;
 	color: #6a6a6a;
+	line-height: 22px;
+	font-size: 15px;
 }
 
-ul{
+ul {
 	list-style: none;
 }
 
 main {
-	display: block;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	overflow: auto;
-	position: fixed;
-}
-
-main::-webkit-scrollbar {
-	width: 5px;
-}
-main::-webkit-scrollbar-track-piece {
-	background-color: rgba(0,0,0,0);
-}
-main::-webkit-scrollbar-thumb {
-	background-color: rgba(0,0,0,0.05);
-}
-
-main > div{
 	display: table;
 	width: 100%;
 	min-height: 100%;
@@ -69,80 +80,172 @@ section {
 }
 
 awesome-button {
-	display: block;
+	display: inline-block;
 	min-height: 38px;
 	margin: 0;
-	color: rgba(0,0,0,0);
+	color: rgba(0, 0, 0, 0);
+	margin: 0px 5px;
 }
 
-github-fork{
-	display: block;
-	position: fixed;
-	right: 0;
-	top: 0;
-	color: rgba(0,0,0,0);
-}
-
-.examples{
+.examples {
 	display: block;
 	text-align: center;
 }
+
+.example awesome-button{
+	display: inline-block;
+	margin: 0px 5px;
+}
+
+awesome-slider{
+	margin: 0 auto;
+}
+
+.slider-container{
+	padding: 15px 0 55px;
+}
+
+.slider-container awesome-button{
+	position: fixed;
+	bottom: 10%;
+	width: 100%;
+	left: 0;
+	z-index: 2000;
+	visibility: hidden;
+}
+
+.banner section{
+	padding-top: calc(45% + 80px);
+}
+
+.banner .example{
+	position: static;
+}
+
+.banner .example:after{
+	display: none;
+}
+
+.banner .slider-container{
+	padding: 15px 0;
+}
+
+/*** Full screen implementation ***/
+
+.fullscreen #exit-fullscreen{
+	visibility: visible;
+}
+
+/* *** */
 
 .use {
 	display: inline-block;
 	margin-top: 55px;
 }
 
-.code{
+.code {
 	display: block;
 	color: #FFFFFF;
 	font-size: 13px;
 	margin-bottom: 10px;
 	line-height: 20px;
+	word-spacing: 2px;
+	letter-spacing: 0.35px;
 }
 
-.code span{
+.code span {
 	color: #f92672;
 	font-style: normal;
 }
 
-.code em{
+.code em {
 	color: #a6e22e;
 	font-style: normal;
 }
 
-.code b{
+.code b {
 	color: #e6db74;
 	font-weight: normal;
 }
 
-.code i{
+.code i {
 	color: #66d9ef;
 	font-weight: normal;
 	font-style: normal;
 }
 
-li{
+.code hr{
+	display: inline-block;
+	width: 30px;
+	border: none;
+}
+
+.code.left {
+	text-align: left;
+	display: inline-block;
+}
+
+li {
 	margin-bottom: 40px;
 	position: relative;
 }
 
-li:after{
+li:after {
 	content: " ";
 	position: absolute;
 	bottom: -20px;
 	left: 35%;
 	width: 30%;
 	height: 1px;
-	background-color: rgba(255,255,255,0.1);
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
-footer{
-	margin-top:50px;
+li.clean:after{
+	display: none;
+}
+
+footer {
+	margin-top: 50px;
 	color: #6a6a6a;
 }
 
-footer a{
-	color: #cfcfcf;
+footer small{
+	display: block;
+	line-height: 21px;
+}
+
+footer a {
+	color: #9f9f9f;
 	text-decoration: none;
+	-webkit-transition: color .2s ease-out;
+	transition: color .2s ease-out;
+}
+
+footer a:hover{
+	color: #dadada;
+}
+
+ul.plugins{
+	max-width: 620px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.plugins p{
+	margin: 0 0 2px;
+	font-size: 13px;
+	line-height: 23px;
+}
+
+.plugins awesome-button{
+	margin: 6px;
+}
+
+.plugins .CodeMirror{
+	text-align: left;
+	margin: 12px 0;
+}
+
+.html-wrapper .CodeMirror:nth-child(2){
+	height: auto;
 }
