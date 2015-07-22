@@ -9,6 +9,7 @@
 	"license": "MIT",
 	"main": "github-fork.html",
 	"keywords": [
+		"web-components",
 		"github fork",
 		"forke me"
 	],
