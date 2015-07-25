@@ -7,6 +7,8 @@ The github-fork Vanilla JS custom element web component is a cool option to quic
 
 [Access the live demo here.](http://caferati.me/demo/github-fork)
 
+![github fork](http://i.imgur.com/h3utwIK.png)
+
 ## Browser support
 
 ![browser support](http://i.imgur.com/4bMmB5x.png)
