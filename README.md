@@ -35,7 +35,7 @@ The github-fork Vanilla JS custom element web component is a cool option to quic
   <github-fork href="http://github.com/rcaferati/github-fork"></github-fork>
   ```
 
-## Install
+## Install or download
 
 Install the component using [Bower](http://bower.io/):
 
