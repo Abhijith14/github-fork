@@ -44,6 +44,11 @@ $ bower install github-fork --save
 ```
 Or [download the zip file](https://github.com/rcaferati/github-fork/archive/master.zip).
 
+## Author
+#### Rafael Caferati
++ <a href="https://caferati.me/portfolio" title="Full-Stack Web Developer, UI/UX Javascript Specialist" target="_blank">Full-Stack Web Developer</a> @ <a title="Full-Stack Web Developer, UI/UX Javascript Specialist" href="https://caferati.me" target="_blank">caferati.me</a>
++ Checkout other open source projects at my <a title="Web Software Developer Code Laboratory" target="_blank" href="https://caferati.me/labs">Code Laboratory</a>
+
 License
 -------
 MIT: http://mit-license.org/
